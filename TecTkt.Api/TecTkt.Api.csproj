@@ -307,6 +307,16 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TecTkt.Common\TecTkt.Common.csproj">
+      <Project>{1e10e648-c7d4-4ce6-91a4-20bd65166d71}</Project>
+      <Name>TecTkt.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TecTkt.Domain\TecTkt.Domain.csproj">
+      <Project>{874c8463-f949-483e-91be-2387a68cbe16}</Project>
+      <Name>TecTkt.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -1,0 +1,50 @@
+﻿@model TecTkt.Common.Models.Pais
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pais</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Intrastat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intrastat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DigitosCif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DigitosCif)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PaisId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
