@@ -7,5 +7,7 @@
         public DataContext() : base("DefaultConnection")
         {
         }
+
+        public System.Data.Entity.DbSet<TecTkt.Common.Models.Pais> Pais { get; set; }
     }
 }
