@@ -9,8 +9,13 @@
         [Required]
         public string Codigo { get; set; }
         [Required]
-        public string Nombre { get; set; }
+        public string Nombre {get; set; }
         public string Intrastat { get; set; }
         public int DigitosCif { get; set; }
+
+        public override string ToString()
+        {
+            return this.Nombre;
+        }
     }
 }
