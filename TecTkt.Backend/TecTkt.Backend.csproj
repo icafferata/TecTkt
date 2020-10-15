@@ -179,6 +179,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LocalDataContext.cs" />
@@ -336,11 +337,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Paises\Create.cshtml" />
-    <Content Include="Views\Paises\Delete.cshtml" />
-    <Content Include="Views\Paises\Details.cshtml" />
-    <Content Include="Views\Paises\Edit.cshtml" />
-    <Content Include="Views\Paises\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.js.flow" />
@@ -353,6 +349,11 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
+    <Content Include="Views\Paises\Create.cshtml" />
+    <Content Include="Views\Paises\Delete.cshtml" />
+    <Content Include="Views\Paises\Details.cshtml" />
+    <Content Include="Views\Paises\Edit.cshtml" />
+    <Content Include="Views\Paises\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

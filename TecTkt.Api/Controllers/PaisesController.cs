@@ -46,7 +46,7 @@ namespace TecTkt.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != pais.PaisId)
+            if (id != pais.CountryId)
             {
                 return BadRequest();
             }
@@ -84,7 +84,7 @@ namespace TecTkt.Api.Controllers
             db.Pais.Add(pais);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = pais.PaisId }, pais);
+            return CreatedAtRoute("DefaultApi", new { id = pais.CountryId }, pais);
         }
 
         // DELETE: api/Paises/5
@@ -114,7 +114,7 @@ namespace TecTkt.Api.Controllers
 
         private bool PaisExists(int id)
         {
-            return db.Pais.Count(e => e.PaisId == id) > 0;
+            return db.Pais.Count(e => e.CountryId == id) > 0;
         }
     }
 }

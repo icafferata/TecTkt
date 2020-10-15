@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using TecTkt.Backend.Models;
-using TecTkt.Common.Models;
-
-namespace TecTkt.Backend.Controllers
+﻿namespace TecTkt.Backend.Controllers
 {
+    using System.Data.Entity;
+    using System.Net;
+    using System.Threading.Tasks;
+    using System.Web.Mvc;
+    using Backend.Models;
+    using Common.Models;
+
     public class PaisesController : Controller
     {
         private LocalDataContext db = new LocalDataContext();
@@ -19,7 +14,7 @@ namespace TecTkt.Backend.Controllers
         // GET: Paises
         public async Task<ActionResult> Index()
         {
-            return View(await db.Pais.ToListAsync());
+            return View(await this.db.Pais.ToListAsync());
         }
 
         // GET: Paises/Details/5
@@ -29,7 +24,7 @@ namespace TecTkt.Backend.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pais pais = await db.Pais.FindAsync(id);
+            Pais pais = await this.db.Pais.FindAsync(id);
             if (pais == null)
             {
                 return HttpNotFound();
@@ -48,12 +43,12 @@ namespace TecTkt.Backend.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "PaisId,Codigo,Nombre,Intrastat,DigitosCif")] Pais pais)
+        public async Task<ActionResult> Create([Bind(Include = "CountryId,Code,Name,IntrastatCode,VatDigits,ImagePath,Remarks")] Pais pais)
         {
             if (ModelState.IsValid)
             {
-                db.Pais.Add(pais);
-                await db.SaveChangesAsync();
+                this.db.Pais.Add(pais);
+                await this.db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
@@ -67,7 +62,7 @@ namespace TecTkt.Backend.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pais pais = await db.Pais.FindAsync(id);
+            Pais pais = await this.db.Pais.FindAsync(id);
             if (pais == null)
             {
                 return HttpNotFound();
@@ -80,12 +75,12 @@ namespace TecTkt.Backend.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "PaisId,Codigo,Nombre,Intrastat,DigitosCif")] Pais pais)
+        public async Task<ActionResult> Edit([Bind(Include = "CountryId,Code,Name,IntrastatCode,VatDigits,ImagePath,Remarks")] Pais pais)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(pais).State = EntityState.Modified;
-                await db.SaveChangesAsync();
+                this.db.Entry(pais).State = EntityState.Modified;
+                await this.db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
             return View(pais);
@@ -98,7 +93,7 @@ namespace TecTkt.Backend.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Pais pais = await db.Pais.FindAsync(id);
+            Pais pais = await this.db.Pais.FindAsync(id);
             if (pais == null)
             {
                 return HttpNotFound();
@@ -111,9 +106,9 @@ namespace TecTkt.Backend.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Pais pais = await db.Pais.FindAsync(id);
-            db.Pais.Remove(pais);
-            await db.SaveChangesAsync();
+            Pais pais = await this.db.Pais.FindAsync(id);
+            this.db.Pais.Remove(pais);
+            await this.db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
@@ -121,7 +116,7 @@ namespace TecTkt.Backend.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                this.db.Dispose();
             }
             base.Dispose(disposing);
         }

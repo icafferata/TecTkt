@@ -5,17 +5,32 @@
     public class Pais
     {
         [Key]
-        public int PaisId { get; set; }
+        public int CountryId { get; set; }
+
         [Required]
-        public string Codigo { get; set; }
+        [StringLength(10)]
+
+        public string Code { get; set; }
+
         [Required]
-        public string Nombre {get; set; }
-        public string Intrastat { get; set; }
-        public int DigitosCif { get; set; }
+        [StringLength(50)]
+        public string Name { get; set; }
+
+        public string IntrastatCode { get; set; }
+        
+        [Display(Name = "VAT Digits")]
+        public int VatDigits { get; set; }
+
+        [Display(Name = "Image")]
+        [StringLength(250)]
+        public string ImagePath { get; set; }
+
+        [DataType(DataType.MultilineText)]
+        public string Remarks { get; set; }
 
         public override string ToString()
         {
-            return this.Nombre;
+            return this.Name;
         }
     }
 }

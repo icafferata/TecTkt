@@ -11,40 +11,56 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Codigo)
+            @Html.DisplayNameFor(model => model.Code)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Codigo)
+            @Html.DisplayFor(model => model.Code)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Nombre)
+            @Html.DisplayNameFor(model => model.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Nombre)
+            @Html.DisplayFor(model => model.Name)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Intrastat)
+            @Html.DisplayNameFor(model => model.IntrastatCode)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Intrastat)
+            @Html.DisplayFor(model => model.IntrastatCode)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DigitosCif)
+            @Html.DisplayNameFor(model => model.VatDigits)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DigitosCif)
+            @Html.DisplayFor(model => model.VatDigits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remarks)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PaisId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CountryId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

@@ -1,6 +1,7 @@
 ﻿namespace TecTkt.Domain.Models
 {
     using System.Data.Entity;
+    using Common.Models;
 
     public class DataContext : DbContext
     {
@@ -8,6 +9,6 @@
         {
         }
 
-        public System.Data.Entity.DbSet<TecTkt.Common.Models.Pais> Pais { get; set; }
+        public DbSet<Pais> Pais { get; set; }
     }
 }
