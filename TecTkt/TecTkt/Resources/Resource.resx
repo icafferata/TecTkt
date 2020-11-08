@@ -132,4 +132,25 @@
   <data name="Countries" xml:space="preserve">
     <value>Countries</value>
   </data>
+  <data name="AddPais" xml:space="preserve">
+    <value>Add country</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="CodePlaceHolder" xml:space="preserve">
+    <value>Enter the country code ...</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NamePlaceHolder" xml:space="preserve">
+    <value>Enter the country name ...</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
 </root>

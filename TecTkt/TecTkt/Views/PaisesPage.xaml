@@ -5,6 +5,9 @@
              x:Class="TecTkt.Views.PaisesPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="{i18n:Translate Countries}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="ic_action_add_circle" Command="{Binding AddCountryCommand }"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout
             BindingContext="{Binding Paises}"
@@ -20,24 +23,36 @@
                         <ViewCell>
                             <Grid>
                                 <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="2*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label 
-                                    FontAttributes="Bold"
-                                    Grid.Row="0"
-                                    Text="{Binding Nombre}" LineBreakMode="TailTruncation">
-                                </Label>
-                                <Label 
+                                <Image
+                                    Grid.Column="0"
+                                    WidthRequest="100"
+                                    Source="{Binding ImageFullPath}">
+                                </Image>
+                                <StackLayout 
                                     Grid.Row="1"
+                                    VerticalOptions="Center">
+                                    <Label 
+                                        FontAttributes="Bold"
+                                        Text="{Binding Name}">
+                                    </Label>
+                                    <Label 
+                                        Text="{Binding Remarks}">
+                                    </Label>
+                                </StackLayout>
+                                <Label 
+                                    Grid.Row="2"
                                     HorizontalOptions="End"
-                                    Text="{Binding DigitosCif}">
+                                    Text="{Binding VatDigits}">
                                 </Label>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-                
+
             </ListView>
         </StackLayout>
     </ContentPage.Content>

@@ -124,12 +124,33 @@
     <value>Aceitar</value>
   </data>
   <data name="TurnOnInternet" xml:space="preserve">
-    <value>Por favor, ative suas configurações de internet.!</value>
+    <value>Por favor, ative suas configurações de internet.</value>
   </data>
   <data name="NoInternet" xml:space="preserve">
-    <value>Não há conexão com a internet</value>
+    <value>Não há conexão com a internet.</value>
   </data>
   <data name="Countries" xml:space="preserve">
     <value>Países</value>
+  </data>
+  <data name="AddPais" xml:space="preserve">
+    <value>Adicione o país</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="CodePlaceHolder" xml:space="preserve">
+    <value>Digite o código do país ...</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="NamePlaceHolder" xml:space="preserve">
+    <value>Insira o nome do país ...</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Observações</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salve</value>
   </data>
 </root>

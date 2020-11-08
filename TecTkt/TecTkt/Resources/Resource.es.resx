@@ -127,9 +127,30 @@
     <value>Por favor, active la conexión de internet.</value>
   </data>
   <data name="NoInternet" xml:space="preserve">
-    <value>No hay conexión a Internet</value>
+    <value>No hay conexión a Internet.</value>
   </data>
   <data name="Countries" xml:space="preserve">
     <value>Países o regiones</value>
+  </data>
+  <data name="AddPais" xml:space="preserve">
+    <value>Añadir país</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="CodePlaceHolder" xml:space="preserve">
+    <value>Ingrese el código del país ...</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="NamePlaceHolder" xml:space="preserve">
+    <value>Introduzca el nombre del país ...</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Comentarios</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Guardar</value>
   </data>
 </root>

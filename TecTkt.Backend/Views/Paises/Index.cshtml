@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Countries</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", new { }, new { @class= "btn btn-primary"})
 </p>
 <table class="table">
     <tr>
@@ -47,15 +47,18 @@
             @Html.DisplayFor(modelItem => item.VatDigits)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ImagePath)
+            @if (!string.IsNullOrEmpty(item.ImagePath))
+            {
+                <img src="@Url.Content(item.ImagePath)" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto;" />
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Remarks)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CountryId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CountryId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CountryId })
+            @Html.ActionLink("Edit", "Edit", new { id=item.CountryId }, new { @class = "btn btn-warning" }) 
+            @Html.ActionLink("Details", "Details", new { id=item.CountryId }, new { @class = "btn btn-info" }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.CountryId }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
